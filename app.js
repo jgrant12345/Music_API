@@ -25,7 +25,6 @@ db.connect(function (err) {
 app.get('/', (req, res) => {
     const sql = 'SELECT * FROM Songs';
     db.query(sql, (err, result) => {
-        if (err) throw err;
         console.log(result);
         res.send(result);
     });
