@@ -4,10 +4,10 @@ const app = express()
 
 require("dotenv").config()
 
-const host = process.env.HOST
-const user = process.env.MYUSER
-const password = process.env.PASSWORD
-const database = process.env.DATABASE
+// const host = process.env.HOST
+// const user = process.env.MYUSER
+// const password = process.env.PASSWORD
+// const database = process.env.DATABASE
 
 // const db = mysql.createConnection({
 //   host: host,
@@ -34,7 +34,6 @@ app.get('/', (req,res) => {
 
 app.get('/1', (req,res) => {
    const sql = "SELECT * FROM Songs";
-   res.send(host)
   //  db.query(sql, (err,result) => {
   //      if(err) throw err;
   //      console.log(result);
