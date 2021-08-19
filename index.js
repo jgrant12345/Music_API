@@ -5,17 +5,17 @@ const PORT = process.env.PORT || 3000;
 
 require('dotenv').config();
 
-const host = process.env.HOST;
-const user = process.env.MYUSER;
-const password = process.env.PASSWORD;
-const database = process.env.DATABASE;
+// const host = process.env.HOST;
+// const user = process.env.MYUSER;
+// const password = process.env.PASSWORD;
+// const database = process.env.DATABASE;
 
-const db = mysql.createConnection({
-    host: host,
-    user: user,
-    password: password,
-    database: database,
-});
+// const db = mysql.createConnection({
+//     host: host,
+//     user: user,
+//     password: password,
+//     database: database,
+// });
 
 db.connect(function (err) {
     if (err) throw err;
@@ -23,12 +23,12 @@ db.connect(function (err) {
 });
 
 app.get('/', (req, res) => {
-    const sql = 'SELECT * FROM Songs';
+    // const sql = 'SELECT * FROM Songs';
     try{
-        db.query(sql, (err, result) => {
+        // db.query(sql, (err, result) => {
             console.log(result);
-            res.send(result);
-        });
+            res.send("hello world");
+        // });
     }
     catch{
         res.send("sorry cannot get from server right now")
