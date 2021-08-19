@@ -1,6 +1,6 @@
-// const express = require('express')
-// var mysql = require('mysql');
-// const app = express()
+const express = require('express')
+var mysql = require('mysql');
+const app = express()
 
 // require("dotenv").config()
 
@@ -22,10 +22,13 @@
 //     console.log("MySql Connected...")
 //     })
 
+app.get('/', (req,res) => {
+   res.send("hi")
+})
     
 
 
 
-// app.listen('3000', () => {
-//     console.log("Server started on port 3000")
-// })
+app.listen('3000', () => {
+    console.log("Server started on port 3000")
+})
