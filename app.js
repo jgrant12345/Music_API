@@ -5,7 +5,7 @@ var PORT = process.env.PORT || 3000
 
 // require("dotenv").config()
 
-// const host = process.env.HOST
+const host = process.env.HOST
 // const user = process.env.MYUSER
 // const password = process.env.PASSWORD
 // const database = process.env.DATABASE
@@ -24,7 +24,7 @@ var PORT = process.env.PORT || 3000
 //     })
 
 app.get('/', (req,res) => {
-   res.send("hi")
+   res.send(host)
 })
     
 
