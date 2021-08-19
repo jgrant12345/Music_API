@@ -24,10 +24,16 @@ db.connect(function (err) {
 
 app.get('/', (req, res) => {
     const sql = 'SELECT * FROM Songs';
-    db.query(sql, (err, result) => {
-        console.log(result);
-        res.send(result);
-    });
+    try{
+        db.query(sql, (err, result) => {
+            console.log(result);
+            res.send(result);
+        });
+    }
+    catch{
+        res.send("sorry cannot get from server right now")
+    }
+    
 });
 
 app.listen(PORT, () => {
