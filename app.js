@@ -2,16 +2,12 @@ const express = require('express')
 var mysql = require('mysql');
 const app = express()
 
-
-
-
 require("dotenv").config()
 
 const host = process.env.HOST
 const user = process.env.MYUSER
 const password = process.env.PASSWORD
 const database = process.env.DATABASE
-console.log(database)
 
 const db = mysql.createConnection({
   host: host,
