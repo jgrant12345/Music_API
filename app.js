@@ -2,6 +2,9 @@ const express = require('express')
 var mysql = require('mysql');
 const app = express()
 
+
+
+
 require("dotenv").config()
 
 const host = process.env.HOST
