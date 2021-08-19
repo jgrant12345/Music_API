@@ -22,24 +22,8 @@ require("dotenv").config()
 //     })
 
     
-app.get('/', (req,res) => {
-    const sql = "SELECT * FROM Songs";
-    res.send("hi")
-   //  db.query(sql, (err,result) => {
-   //      if(err) throw err;
-   //      console.log(result);
-   //      res.send(result)
-   //  })
-})
 
-app.get('/1', (req,res) => {
-   const sql = "SELECT * FROM Songs";
-  //  db.query(sql, (err,result) => {
-  //      if(err) throw err;
-  //      console.log(result);
-  //      res.send(result)
-  //  })
-})
+
 
 app.listen('3000', () => {
     console.log("Server started on port 3000")
